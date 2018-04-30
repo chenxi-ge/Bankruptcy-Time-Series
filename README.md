@@ -1,8 +1,8 @@
-## Bankruptcy  Prediction  using  Time  Series  Analysis
+# Bankruptcy  Prediction  using  Time  Series  Analysis
 
 **Author: Chenxi Ge, David Kes, Chuan Xu, Zhengjie Xu**
 
-#### Background and Data
+## Background and Data
 The goal of this project is to forecast Canadian monthly bankruptcy rates for the year 2011 and 2012 using a time series model.
 
 The primary data for constructing the model is the Canadian monthly bankruptcy rates from January 1987 to December 2010. Other data used are: unemployment rate, population size, and housing price index (HPI), all in the same time span as the bankruptcy data.
@@ -13,7 +13,7 @@ The primary data for constructing the model is the Canadian monthly bankruptcy r
 
 The plot above provides insights on trend and seasonality of each variable. Specifically, the bankruptcy rate shows an increasing trend in the long term and seasonal fluctuations. Also note that the house price index is closely correlated to bankruptcy rate. 
 
-#### Models
+## Models
 There are numerous modeling approaches available in forecasting time series data. This report will summarize some of the most common models, highlight the one used as our final model, and discuss what made it the optimal choice. Each model was fit by altering various parameters.
 
 We also expand our framework by utilizing traditional machine learning models like linear regression and XGBoost.
@@ -53,7 +53,7 @@ Our **Linear Regression model** uses Month, Year, Unemployment Rate, House Price
 
 **XGBoost** is based on gradient boosting framework. It is widely used in solving real-world data problems. The XGBoost model itself turns out to perform worse than linear regression. However, when we first implement linear regression and then use XGBoost to predict the residual of linear regression, the result appears better than linear regression on the validation set.
 
-#### Performance
+## Performance
 
 We listed the models and their performance in the table below, sorted by their RMSE.
 
