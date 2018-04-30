@@ -2,7 +2,7 @@ library(forecast)
 library(vars)
 
 #################### Initial Reading ####################
-setwd('/Users/chenxi.ge/Desktop/project/')
+setwd('~/Downloads/Bankruptcy-Time-Series')
 train_in <- read.csv("train.csv", header=T)
 test_in <- read.csv("test.csv", header=T)
 
@@ -287,8 +287,9 @@ pred_u.varx <- ts(pred.varx$fcst$b_train[,3], start = c(2009, 1), frequency = 12
 plot(ts(data=train_in$Bankruptcy_Rate, frequency = 12, start = c(1987, 1)), type = "l", ylab = 'rate')
 title(main = "VARX model (RMSE = 0.003027)")
 points(pred_m.varx, type = "l", col = "red")
-points(pred_l.varx, type = "l", col = "green")
-points(pred_u.varx, type = "l", col = "green")
+points(pred_l.varx, type = "l", col = "blue")
+points(pred_u.varx, type = "l", col = "blue")
+legend("bottomright", legend = c("Observed", "Fitted", "95% CI"), lty = 1, col = c("black", "red", "blue"))
 
 test_rmse.varx <- sqrt(mean((pred_m.varx - b_valid)^2))
 test_rmse.varx
