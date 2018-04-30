@@ -72,5 +72,5 @@ From our observation, VARX provides the best prediction accuracy. It makes sense
 We also tried model ensemble to see if it will improve our RMSE. Unfortunately, none of the combinations improved our prediction RMSE on our validation set. Thus, we decided to choose VARX as our final model, and visualized its prediction on the validation set.
 
 <p align="center">
-<img src="/images/VARX.png" width="700">
+<img src="/images/VARX.png" width="1000">
 </p>
